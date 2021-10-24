@@ -1,4 +1,12 @@
-FROM tiangolo/uwsgi-nginx-flask:python3.6-alpine3.7
-RUN apk --update add bash vim
-COPY ./requirements.txt /var/www/requirements.txt
-RUN pip install -r /var/www/requirements.txt
+FROM python:3.8-slim-buster
+WORKDIR /usr/src/app
+ENV FLASK_APP=routes.py
+ENV FLASK_RUN_HOST=0.0.0.0
+#Server will reload itself on file changes if in dev mode
+ENV FLASK_ENV=production
+COPY routes.py .
+COPY templates .
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["flask", "run"]
