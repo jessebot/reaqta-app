@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: reaqta
-        image: domojesse/my-next-band:latest
+        image: domojesse/reaqta-challenge:latest
         ports:
         - containerPort: 5000
