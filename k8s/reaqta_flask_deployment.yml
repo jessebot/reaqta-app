@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reaqta-deploy
+  labels:
+    app: reaqta
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reaqta
+  template:
+    metadata:
+      labels:
+        app: reaqta
+    spec:
+      containers:
+      - name: reaqta
+        image: domojesse/my-next-band:latest
+        ports:
+        - containerPort: 5000
