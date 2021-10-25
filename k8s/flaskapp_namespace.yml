@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: flaskapp
+  selfLink: /api/v1/namespaces/flaskapp
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
