@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: reaqta-svc
+  namespace: flaskapp
   labels:
     app: reaqta
 spec:
