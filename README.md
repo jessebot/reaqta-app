@@ -1,3 +1,5 @@
+# maybeyou.live runs this live right now
+
 ## To Test Locally (Outside of Docker)
 ``` sh
 ./flask_start.sh
@@ -13,14 +15,26 @@ curl localhost:5000/api
 
 ## To Test entire Docker Image
 
-### Build the App
+### Build the App using Docker
 _Hint: you can replace 0.0.1 with whatever version you're actively testing_
 ``` sh
 docker build -t reaqta:0.0.1 .
 ```
 
-### Run the App
+### Run the App in Docker
 This will run the container and forward the container port (5000) to the standard http port (80)
 ``` sh
 docker run --publish 5000:80 -t reaqta:0.0.1
 ```
+
+## Kubernetes
+
+### The content in k8s needs to be a helm chart
+More like goobernetes, amirite?
+Anyway...
+But in the meantime, you could theoretically just run a `k apply -f` for every yaml file in there, and you should be good.
+
+It deploys:  k8s service, deployment, and namespace -- this all lives in the flaskapp namespace, for honestly no reason other than I'm sleepy
+
+### proper gitops not functional, but SOON
+we're gonna just have the 
