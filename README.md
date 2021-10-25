@@ -41,3 +41,6 @@ It deploys:  k8s service, deployment, and namespace -- this all lives in the fla
 
 ### proper gitops not functional, but SOON
 we're gonna just have the image tag updated, but will first require a proper k8s ci/cd process - for now, we're just using always pull image policy, and then scaling up and down deployments - or just killing off pods, that works too.
+
+## SSL
+welp, there's none of that right now, :shrug: but we can set that up via letsencrypt if we want later
