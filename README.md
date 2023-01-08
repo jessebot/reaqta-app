@@ -1,4 +1,4 @@
-# maybeyou.live runs this live right now
+This was part of an interview assignment for a devops job at Reaqta. The other half of this assignment is in this repo, [reaqta-infra](https://github.com/jessebot/reaqta-infra). I got the job, so I'm archiving this now.
 
 ## To Test Locally (Outside of Docker)
 ``` sh
